@@ -1,0 +1,38 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: aquamarine;
+}
+.btn input{
+display: none;
+}
+.btn label.box{
+border: 3px solid #333;
+padding: 35px 100px;
+border-radius: 100px;
+position: relative;
+}
+.btn label.box::before{
+content: '';
+position: absolute;
+top: 50%;
+left: 10px;
+transform: translateY(-50%);
+border: 3px solid #333;
+padding: 30px;
+border-radius: 50%;
+cursor: pointer;
+transition: all .2s;
+}
+.btn input:checked + label.box::before{
+left: 125px;
+background-color: #333;
+}
